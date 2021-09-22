@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
 const userSchema = new mongoose.Schema({
     fname: { type: String, required: true },
@@ -15,6 +16,33 @@ const userSchema = new mongoose.Schema({
       trim: true,
       minLength: 3,
       required: true
+    },
+    contestantOne: {
+      type: Schema.Types.ObjectId, ref: 'Contestant'
+    },
+    contestantTwo: {
+      type: Schema.Types.ObjectId, ref: 'Contestant'
+    },
+    contestantThree: {
+      type: Schema.Types.ObjectId, ref: 'Contestant'
+    },
+    contestantFour: {
+      type: Schema.Types.ObjectId, ref: 'Contestant'
+    },
+    contestantFive: {
+      type: Schema.Types.ObjectId, ref: 'Contestant'
+    },
+    contestantSix: {
+      type: Schema.Types.ObjectId, ref: 'Contestant'
+    },
+    contestantSeven: {
+      type: Schema.Types.ObjectId, ref: 'Contestant'
+    },
+    contestantEight: {
+      type: Schema.Types.ObjectId, ref: 'Contestant'
+    },
+    Team: {
+      type: Schema.Types.ObjectId, ref: 'Team'
     }
 },  
 {
@@ -28,5 +56,5 @@ const userSchema = new mongoose.Schema({
 }
 );
 
-let User = mongoose.model('User', userSchema); // .model compiles the schema into a model
+let User = mongoose.model('User', userSchema); 
 module.exports = User;  
