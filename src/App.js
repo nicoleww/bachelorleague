@@ -8,7 +8,6 @@ import Home from "./pages/Home"
 
 const App = () => {
 
-
   return (
     <div className="App">
 
@@ -24,6 +23,7 @@ const App = () => {
           )}/>
       <Redirect to="/home" />
       </Switch>
+      
     </div>
   );
 }
