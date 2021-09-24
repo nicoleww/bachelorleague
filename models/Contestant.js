@@ -8,8 +8,10 @@ const contestantSchema = new mongoose.Schema({
     occupation: { type: String },
     hometown: { type: String },
     photo: { type: String },
-    points: { type: Number }    
+    points: { type: Number },
+    isDraftClosed: { type: Boolean }    
 })
 
 
 let Contestant = mongoose.model('Contestant', contestantSchema); 
+module.exports = Contestant;

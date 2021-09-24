@@ -18,11 +18,12 @@ const userSchema = new mongoose.Schema({
       required: true
     },
     contestants: [{ type: Schema.Types.ObjectId, ref: 'Contestant' }],
-    team: {
-      type: Schema.Types.ObjectId, ref: 'Team'
+    league: {
+      type: Schema.Types.ObjectId, ref: 'League'
     },
     isAdmin: { type: Boolean, required: true },
-    weeklyAnswer: { type: Schema.Types.ObjectId, ref: 'Contestant' }
+    weeklyAnswer: { type: Schema.Types.ObjectId, ref: 'Contestant' },
+    isSuper: { type: Boolean, required: true }
 },  
 {
     timestamps: true,
