@@ -4,12 +4,18 @@
 .Home {
   @include basicPageStylings;
   @include displayFlexCenter(column);
+  background: linear-gradient($pink, $rose);
 }
 
 .Home h1 {
-  font-size: 36px;
+  font-size: 60px;
   font-family: "Montserrat Alternates", sans-serif;
-  margin: 120px 0px 20px 0px;
+  margin: 20px 0px;
+  color: $cream;
+}
+
+.Home h2 {
+  color: $cream;
 }
 
 .Home .rose-logo {
@@ -23,40 +29,69 @@
 }
 
 .home-card {
-  width: 350px;
-  height: 350px;
-  box-shadow: 5px 10px $cream;
-  border: 1.5px solid rgb(228, 228, 228);
-  border-radius: 15%;
+  width: 300px;
+  height: 200px;
+  box-shadow: 5px 8px 50px -15px $pink;
+  border-radius: 5%;
   @include displayFlexCenter(column);
-  margin: 0px 50px;
+  margin: 0px 25px;
   margin-top: 150px;
+  padding: 20px;
+  color: $cream;
 }
 
 .home-card img {
-  width: 150px;
-  height: 150px;
+  width: 60px;
+  height: 60px;
   object-fit: contain;
   margin-bottom: 30px;
+  align-self: flex-start;
 }
 
-.home-card .home-panel-img {
-  width: 180px;
-  height: 180px;
-  margin-bottom: 10px;
+.action-btn {
+  padding: 15px 30px;
+  background-color: rgb(64, 165, 212);
+  border-radius: 5%;
+  color: $cream;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 80px;
 }
 
-.home-card p {
-  font-size: 18px;
-  text-align: center;
+@media screen and (max-width: 1030px) {
+  .home-grid {
+    flex-wrap: wrap;
+    margin-top: 100px;
+  }
+  .home-card {
+    margin-top: 12px;
+  }
 }
 
-.home-card:hover {
-  transform: scale(1.05);
-}
-
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 800px) {
   .Home h1 {
-    margin: 100px 0px 20px 0px;
+    font-size: 40px;
+    text-align: center;
+  }
+  .Home h2 {
+    text-align: center;
+    font-size: 20px;
+  }
+  .action-btn {
+    margin-bottom: 80px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .Home h1 {
+    font-size: 26px;
+    margin: 80px 20px 20px 20px;
+  }
+  .Home h2 {
+    font-size: 18px;
+    margin: 0px 20px;
+  }
+  .home-grid {
+    margin-top: 50px;
   }
 }

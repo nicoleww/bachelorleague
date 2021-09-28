@@ -3,6 +3,7 @@ import List from "../assets/List.png"
 import Group from "../assets/Group.png"
 import Vote from "../assets/Vote.png"
 import Medal from "../assets/Medal.png"
+import { Link } from "react-router-dom"
 
 const Home = (props) => {
     return(
@@ -10,11 +11,13 @@ const Home = (props) => {
         {props.user == null ? 
         (
             <section className="Home">
+                <div>
                 <h1>Welcome to Rose Battle <img src={Rose} alt="" className="rose-logo" /></h1>
                 <h2>A fantasy league for ABC's The Bachelor and The Bachelorette series.</h2>
+                </div>
                 <div className="home-grid">
                     <div className="home-card">
-                        <img src={Group} alt="" className="home-panel-img" />
+                        <img src={Group} alt="" />
                         <p>Create or join a league with your friends and family.</p>
                     </div>
                     <div className="home-card">
@@ -30,6 +33,7 @@ const Home = (props) => {
                         <p>Tally up all the points and declare the league winner.</p>
                     </div>
                 </div>
+                    <Link to="/signup" className="action-btn">Get Started</Link>
             </section>
         ) 
         : 
