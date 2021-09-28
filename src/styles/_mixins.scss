@@ -1,0 +1,11 @@
+@mixin displayFlexCenter($direction) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: $direction;
+}
+
+@mixin basicPageStylings {
+  width: 100%;
+  min-height: 92vh;
+}

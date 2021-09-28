@@ -1,2 +1,47 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Poppins:wght@300&display=swap");
+@import "./home";
 @import "./mixins";
 @import "./variables";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  height: 8vh;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: $pink;
+}
+
+nav .logo {
+  margin-left: 30px;
+  width: 80%;
+  font-size: 18px;
+}
+
+nav .nav-links {
+  margin-right: 30px;
+  width: 20%;
+  display: flex;
+  justify-content: space-between;
+}
+
+nav a {
+  color: $cream;
+  text-decoration: none;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+@media screen and (max-width: 1200px);

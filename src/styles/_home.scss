@@ -1,0 +1,62 @@
+@import "./mixins";
+@import "./variables";
+
+.Home {
+  @include basicPageStylings;
+  @include displayFlexCenter(column);
+}
+
+.Home h1 {
+  font-size: 36px;
+  font-family: "Montserrat Alternates", sans-serif;
+  margin: 120px 0px 20px 0px;
+}
+
+.Home .rose-logo {
+  height: 30px;
+  width: 30px;
+  object-fit: cover;
+}
+
+.home-grid {
+  @include displayFlexCenter(row);
+}
+
+.home-card {
+  width: 350px;
+  height: 350px;
+  box-shadow: 5px 10px $cream;
+  border: 1.5px solid rgb(228, 228, 228);
+  border-radius: 15%;
+  @include displayFlexCenter(column);
+  margin: 0px 50px;
+  margin-top: 150px;
+}
+
+.home-card img {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 30px;
+}
+
+.home-card .home-panel-img {
+  width: 180px;
+  height: 180px;
+  margin-bottom: 10px;
+}
+
+.home-card p {
+  font-size: 18px;
+  text-align: center;
+}
+
+.home-card:hover {
+  transform: scale(1.05);
+}
+
+@media screen and (max-width: 1200px) {
+  .Home h1 {
+    margin: 100px 0px 20px 0px;
+  }
+}

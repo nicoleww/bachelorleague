@@ -1,10 +1,12 @@
 import React from "react";
 import "./styles/style.css"
-import { Route, Switch, Redirect, useHistory } from "react-router-dom";
+import { Route, Switch, Redirect, useHistory, Link } from "react-router-dom";
 import { useState } from "react";
 import Signup from "./pages/Signup"
 import Login from "./pages/Login"
 import Home from "./pages/Home"
+import Team from "./pages/Team"
+import Account from "./pages/Account"
 
 const App = () => {
 
@@ -63,19 +65,57 @@ const App = () => {
     }
   }
 
+  const handleLogout = () => {
+    localStorage.clear("token")
+    setUser(null)
+    history.push("/home")
+  }
+
 
   return (
     <div className="App">
-
+      <nav>
+        {user == null ? 
+        (
+        <>
+          <div className="logo">
+            <Link to="/home">Rose Battle</Link>
+          </div>
+          <div className="nav-links">
+            <Link to="/login">Login</Link>
+            <Link to="/signup">Sign Up</Link>
+          </div>
+        </>
+        ) 
+        : 
+        (
+          <>
+          <div className="logo">
+            <Link to="/home">Rose Battle</Link>
+          </div>
+          <div className="nav-links">
+            <Link to="/team">Team</Link>
+            <Link to="/account">Account</Link>
+          </div>
+        </>
+        )
+        }
+      </nav>
       <Switch>
       <Route path='/home' render={(props) => (
-            <Home {...props}/>
+            <Home {...props} user={user} />
           )}/>
       <Route path='/signup' render={(props) => (
             <Signup {...props}/>
           )}/>
       <Route path='/login' render={(props) => (
             <Login {...props}/>
+          )}/>
+      <Route path='/team' render={(props) => (
+            <Team {...props} user={user} />
+          )}/>
+      <Route path='/account' render={(props) => (
+            <Account {...props} user={user} />
           )}/>
       <Redirect to="/home" />
       </Switch>
