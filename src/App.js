@@ -20,6 +20,7 @@ const App = () => {
   const [isAdmin, setIsAdmin] = useState(false)
   const [isSuper, setIsSuper] = useState(false)
 
+
   const handleSignup = async (e) => {
     e.preventDefault()
     try {

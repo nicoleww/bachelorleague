@@ -43,3 +43,23 @@ nav a {
   font-weight: bold;
   letter-spacing: 1px;
 }
+
+@media screen and (max-width: 1030px) {
+  nav .logo {
+    width: 65%;
+  }
+  nav .nav-links {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  nav .logo {
+    font-size: 14px;
+    width: 60%;
+  }
+  nav .nav-links {
+    font-size: 12px;
+    width: 40%;
+  }
+}
