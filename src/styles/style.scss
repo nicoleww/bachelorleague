@@ -1,7 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&family=Poppins:wght@300&display=swap");
-@import "./home";
 @import "./mixins";
 @import "./variables";
+@import "./home";
+@import "./signup";
 
 * {
   margin: 0;
@@ -15,7 +16,7 @@
 }
 
 nav {
-  height: 8vh;
+  height: 6vh;
   width: 100%;
   display: flex;
   justify-content: space-between;
